@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/RohitDayama/k8s-deploy.git'
+               git branch: 'main', url: 'https://github.com/RohitDayama/k8s-deploy.git'
             }
-        }
+        } 
     
         stage ("terraform init") {
             steps {
